@@ -1,0 +1,237 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background-color: #272C34;
+}
+
+.center-clip-path {
+    width: 160px;
+    height: 160px;
+    clip-path: circle(80px at center);
+    overflow: hidden;
+}
+
+.circle{
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.sky{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 160px;
+    height: 115px;
+    background-color: #7DDFFC;
+    z-index: 0;
+    animation: sky-black 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+.ground{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 160px;
+  height: 55px;
+  background-color: #FFEB50;
+  z-index: 1;
+  animation: fading-sand 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+.sun{
+    position: absolute;
+    z-index: 2;
+    top: 7px;
+    left: 73px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #FFEF00;
+    transform-origin: 0% 450%;
+    animation: sun-animation 4s cubic-bezier(0.4, 0, 0.76, 1.05) infinite;
+}
+
+
+@keyframes sun-animation {
+0% {
+    background: #F57209;
+    transform: rotate(-70deg);
+}
+30% {
+    background: #FFEF00;
+    transform: rotate(-28deg);
+}
+70% {
+    background: #FFEF00;
+}
+100% {
+    background: #F57209;
+    transform: rotate(70deg);
+}
+}
+
+@keyframes sky-black{
+0% {
+    background: #272C34;
+}
+
+30% {
+    background: #7DDFFC;
+}
+70% {
+    background: #7DDFFC;
+}
+100% {
+    background: #272C34;
+}
+}
+
+@keyframes fading-sand{
+    0% {
+    background: #272C34;
+}
+30% {
+    background: #FFEB50;
+}
+70% {
+    background: #FFEB50;
+}
+100% {
+    background: #272C34;
+}
+}
+
+[class^="diamond"] {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.diamond-1{
+    clip-path: polygon(50% 0, 51% 50%, 25% 50%);
+    background-image: linear-gradient(to right, yellow 90%, brown 10%);
+    animation: diamond-1-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+.diamond-2{
+    clip-path: polygon(50% 0%, 75% 50%, 50% 50%);
+    background-image: linear-gradient(to right, yellow 10%, brown 90%);
+    animation: diamond-2-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+.diamond-3{
+    clip-path: polygon(51% 49%, 50% 100%, 25% 50%);
+    background-image: linear-gradient(to right, yellow 25%, brown);
+    animation: diamond-3-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+.diamond-4{
+    clip-path: polygon(50% 49%, 75% 50%, 50% 100%);
+    background-image: linear-gradient(to right, yellow, brown 80%);
+    animation: diamond-4-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+@keyframes diamond-1-shading{
+0% {
+    background: #272C34;
+}
+30% {
+    background: #FEF857;
+}
+70% {
+    background: #FF9205;
+}
+100% {
+    background: #272C34;
+}
+}
+
+@keyframes diamond-2-shading{
+0% {
+    background: #272C34;
+}
+30% {
+    background: #FF9205;
+}
+70% {
+    background:#FEF857;
+}
+100% {
+    background: #272C34;
+}
+}
+
+@keyframes diamond-3-shading{
+0% {
+    background: #272C34;
+}
+30% {
+    background:#FDD400;
+}
+70% {
+    background: #CE5501;
+}
+100% {
+    background: #272C34;
+}
+}
+
+@keyframes diamond-4-shading{
+0% {
+    background: #272C34;
+}
+30% {
+    background: #CE5501;
+}
+70% {
+    background: #FDD400;
+}
+100% {
+    background: #272C34;
+}
+}
+
+.shadow {
+    position: absolute;
+    z-index: 2;
+    top: 105px;
+    left: -74px;
+    height: 30px;
+    width: 360px;
+    background: rgba(0, 0, 0, 0.2);
+    animation: shadow-animation 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+    transform-origin: 50% 0%;
+    transform: scale(1.3);
+}
+
+@keyframes shadow-animation {
+
+    0%{ opacity: 0.5;
+        clip-path: polygon(44.5% 0%, 70% 0%, 105% 180%, 75% 50%);
+        transform: scale(0);
+    }
+
+    30%{
+        opacity: 1;
+        clip-path: polygon(44.5% 0%, 70% 0%, 105% 180%, 75% 50%);
+        transform: scale(1);
+    }
+
+    55%{
+        opacity: 1;
+    transform: scale(1.3);
+    clip-path: polygon(44.5% 0%, 50% 50%, 44.5% 100%, 40% 50%);
+    }
+    100%{
+        opacity: 0;
+    transform: scale(1.3);
+    clip-path: polygon(44.5% 0%, 20% 25%, 0px 0px, 0% 0%);
+    }
+}

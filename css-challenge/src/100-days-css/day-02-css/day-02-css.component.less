@@ -1,0 +1,88 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background-color: #3FAF82;
+    cursor: pointer;
+}
+
+.body-content{
+  flex-direction: column;
+  position: relative;
+  height: @body-content-height;
+}
+
+[class^="line-"]{
+    background-color: @header-font-color;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 3px;
+}
+
+.line-one{
+    height: 8px;
+    width: 80px;
+    animation: line-one-animation 0.7s ease-in-out forwards;
+    animation-direction: normal;
+}
+
+.line-two{
+    height: 8px;
+    width: 80px; 
+    margin: 12px 0px; 
+    animation: line-two-animation 0.7s ease-in-out forwards;
+    animation-direction: normal;
+}
+
+.line-three{
+    height: 8px;
+    width: 80px;
+    animation: line-three-animation 0.7s ease-in-out forwards;
+    animation-direction: normal;
+}
+
+.line-active-one{
+    animation: line-one-animation-rev 0.7s ease-in-out forwards;
+    animation-direction: reverse;
+}
+
+.line-active-two{
+    animation: line-two-animation-rev 0.7s ease-in-out forwards;
+    animation-direction: reverse;
+}
+
+.line-active-three{
+    animation: line-three-animation-rev 0.7s ease-in-out forwards;
+    animation-direction: reverse;
+}
+
+@keyframes line-one-animation {
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(0deg);}
+  100% {transform: rotate(45deg);}
+}
+@keyframes line-one-animation-rev {
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(0deg);}
+  100% {transform: rotate(45deg);}
+}
+
+@keyframes line-two-animation {
+  0%   {margin: 12px 0px;height: 8px; width: 80px; opacity: 1;}
+  50%  {margin: 0px;height:0px; width: 0px; opacity: 0;}
+  100% {margin: 0px;height: 8px; width: 80px; opacity: 0;}
+}
+@keyframes line-two-animation-rev {
+  0%   {margin: 12px 0px;height: 8px; width: 80px; opacity: 1;}
+  50%  {margin: 0px;height:0px; width: 0px; opacity: 0;}
+  100% {margin: 0px;height: 8px; width: 80px; opacity: 0;}
+}
+
+@keyframes line-three-animation {
+  0%   {margin-top:0px;transform: rotate(0deg);}
+  50%  {margin-top:-8px;transform: rotate(0deg);}
+  100% {margin-top:-16px;transform: rotate(135deg);}
+}
+@keyframes line-three-animation-rev {
+  0%   {margin-top:0px;transform: rotate(0deg);}
+  50%  {margin-top:-8px;transform: rotate(0deg);}
+  100% {margin-top:-16px;transform: rotate(135deg);}
+}

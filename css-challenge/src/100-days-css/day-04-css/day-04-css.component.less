@@ -1,0 +1,73 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background-color: #E56262;
+}
+
+[class^="line-"]{
+    background-color: @header-font-color;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+    margin: auto;
+}
+
+.line-one{
+  height: 90px;
+  width: 90px;
+  z-index: 1;
+  opacity: 0.3;
+  animation: line-one-animation 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.line-two{
+  height: 60px;
+  width: 60px;
+  z-index: 2;
+  opacity: 0.6;
+  animation: line-two-animation 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.line-three{
+  height: 30px;
+  width: 30px;
+  z-index: 3;
+  opacity: 0.9;
+  animation: line-three-animation 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+@keyframes line-one-animation {
+  0%,10% {
+  transform: scale(0);
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+  transform: scale(1);
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes line-two-animation {
+  0%,40%  {
+  transform: scale(0);
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+  transform: scale(1);
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes line-three-animation {
+  0%,70%   {
+  transform: scale(0);
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+  transform: scale(1);
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);}
+}

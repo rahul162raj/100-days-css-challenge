@@ -1,0 +1,20 @@
+<ng-container>
+    <div class="app-container">
+        <div class="header-content col-12">
+            <h1 class="text-content flex-center">100 Days CSS</h1>
+        </div>
+        <div class="body-content absolute-center col-6 col-xs-12">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="footer-content flex-center col-12 col-xs-12">
+            <div class="footer-inner-content">
+                <div
+                    *ngFor="let item of collection | paginate: {currentPage: currentIndex, itemsPerPage:1, totalItems:endIndex}">
+                </div>
+                <pagination-controls class="my-pagination" (pageChange)="pageChange($event)" previousLabel=""
+                    nextLabel="" maxSize="5">
+                </pagination-controls>
+            </div>
+        </div>
+    </div>
+</ng-container>

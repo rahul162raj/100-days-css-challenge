@@ -1,0 +1,86 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: background-animation 15s ease-in-out infinite alternate;
+    background-size: 400% 400%;
+}
+
+.hundred-container{
+    position: relative;
+    top: 30%;
+    margin-left: -10px;
+    justify-content: center;
+    overflow: hidden
+}
+
+[class^="number-"]{
+    box-shadow: 2px 4px 8px 0 rgba(74,100,164,0.4);
+}
+
+.number-half{
+    background-color: @header-font-color;
+    height: 40px;
+    width: 20px;
+    transform: rotate(45deg);
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.number-one{
+    height: 78px;
+    width: 25px;
+    border-radius: 3px;
+    margin-left: -6px;
+    z-index: 2;
+    background-color: @header-font-color;
+}
+
+.number-zero-first{
+    margin-left: -15px;
+    z-index: 1;
+}
+
+.number-zero-second{
+    margin-left: -15px;
+    z-index: 0;
+}
+
+[class^="number-zero"]{
+    height: 80px;
+    width: 80px;
+    border: 22px solid @header-font-color;
+    border-radius: 50px;
+}
+
+[class^="word"]{
+    text-align: center;
+    position: relative;
+    color:@header-font-color;
+    text-shadow: 1px 2px 4px rgba(74,100,164,0.4);
+}
+
+.word-big{
+    top: 35%;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.word-small{
+    top: 40%;
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+@keyframes background-animation{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

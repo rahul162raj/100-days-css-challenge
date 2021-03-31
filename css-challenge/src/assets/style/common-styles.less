@@ -1,0 +1,38 @@
+@import "./shared-variable.less";
+
+.absolute {
+    &-center{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+    margin: auto;
+    }
+    &-top{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;	
+    margin: auto;
+    }
+    &-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+    margin: auto;
+    }
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.day-container{
+    box-shadow: 4px 8px 16px 0 rgba(69,69,69,0.1);
+    border-radius: 2px;
+    height: @body-content-height;
+}
