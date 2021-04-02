@@ -1,0 +1,114 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background: linear-gradient(to top right, #3A92AF 0%, #5CA05A 100%);
+}
+
+.card-container{
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin: auto;
+    height: 280px;
+    width: 280px;
+    background: #ffffff;
+    .card-header{
+        height: 50px;
+        border-bottom: 1px solid #D8D8D8;
+        .card-title{
+            display: flex;
+            color: #676767;
+            font-size: 16px;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+        .bar{
+            position: absolute;
+            z-index: 1;
+            width: 280px;
+            height: 3px;
+            top: 49px;
+            left: 0;
+            background: #6ECE3B;
+            transition: all 3s ease-out;
+            transform-origin: 0 0;
+        }
+    }
+    .card-content{
+        height: 230px;
+        .form-control{
+            position: absolute;
+            height: 80px;
+            width: 100px;
+            opacity: 0;
+            cursor: pointer;
+            top: 90px;
+            left: 90px;
+        }
+        .file-name {
+            color: #676767;
+            font-size: 13px;
+            position: absolute;
+            height: 80px;
+            width: 100px;
+            text-align: center;
+            overflow-wrap: anywhere;
+            top: 90px;
+            left: 90px;
+        }
+        .drop-zone{
+            border: 1px dashed #A4A4A4;
+            border-radius: 3px;
+            height: 80px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            top: 40px;
+            left: 90px;
+        }
+        [class^="upload-icon-"]{
+            color: #bdbdbd;
+            position: absolute;
+            i{
+                font-size: 48px;
+            }
+        }
+        .upload-button{
+            width: 140px;
+            height: 40px;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            transition: all 0.2s ease-in-out;
+            color: white;
+            background: #6ECE3B;
+            cursor: pointer;
+            box-shadow: 0 2px 0 0 #498C25;
+            position: relative;
+            top: 80px;
+            left: 70px;
+        }
+        .upload-icon-loading{
+            animation: syncing 3.2s ease-in-out;
+        }
+    }
+
+    @keyframes syncing {
+        0% {
+            transform: rotate(0deg);
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(360deg);
+            opacity: 0;
+        }
+    }
+}

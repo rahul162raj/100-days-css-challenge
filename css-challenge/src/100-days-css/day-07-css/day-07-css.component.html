@@ -1,12 +1,66 @@
 <ng-container>
     <div class="day-container">
-        <div class="card-container absolute-center">
-            <div class="row card-header">
+        <div class="card-container">
+            <div class="menu absolute-center">
+                <div class="menu-item">
+                    <div class="row">
+                        <span class="material-icons">dashboard</span>
+                        <p>Dashboard</p>
+                    </div>
+                    <div class="row">
+                        <span class="material-icons">supervised_user_circle</span>
+                        <p>Profile</p>
+                    </div>
+                    <div class="row">
+                        <span class="material-icons">notifications</span>
+                        <p>Notifications</p>
+                    </div>
+                    <div class="row">
+                        <span class="material-icons">message</span>
+                        <p>Messages</p>
+                    </div>
+                    <div class="row">
+                        <span class="material-icons">settings</span>
+                        <p>Settings</p>
+                    </div>
+                </div>
             </div>
-            <div class="header-title">Notification</div>
-            <div class="search-icon">||</div>
-            <div class="search-bar"></div>
+            <div class="card-dashboard absolute-center">
+                <input type="text" class="search-bar" placeholder="Search ...">
+                <div class="row card-header">
+                    <div class="menu-icon" (click)="onClickMenuIcon()">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    <div class="header-title">Notifications</div>
+                    <div class="search-icon" (click)="onClickSearchIcon()">
+                        <i class="material-icons">search</i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="line"></div>
+                    <div class="row notification">
+                        <span class="circle"></span>
+                        <div class="text">
+                            <div class="time">9:24 AM</div>
+                            <p><b>John Walker</b> posted a photo on your wall.</p>
+                        </div>
+                    </div>
+                    <div class="row notification">
+                        <span class="circle"></span>
+                        <div class="text">
+                            <div class="time">8:19 AM</div>
+                            <p><b>Alice Parker</b> commented your last post.</p>
+                        </div>
+                    </div>
+                    <div class="row notification">
+                        <span class="circle"></span>
+                        <div class="text">
+                            <div class="time">Yesterday</div>
+                            <p><b>Luke Wayne</b> commented your last post.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </ng-container>

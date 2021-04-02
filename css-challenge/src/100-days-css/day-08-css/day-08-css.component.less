@@ -1,0 +1,84 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background: #4C4C4C;
+}
+
+.card-container{
+    margin: auto;
+    height: 280px;
+    width: 280px;
+    background: #242424;
+    border: 7px solid #3A3A3A;
+    border-radius: 50%;
+}
+
+.heart-icon{
+    position: absolute;
+    top: 95px;
+    left: 95px;
+    color: #F85B5B;
+    i { 
+        font-size: 80px;
+        animation: beat 0.9s ease-in-out infinite;
+    }
+}
+
+.spinner{
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    animation: loader 5s linear infinite;
+    left: 0px;
+    circle{
+        stroke: #F85B5B;
+        stroke-width: 3;
+        fill: none;
+        stroke-dasharray: 625;
+        animation: spinner 5s linear infinite;
+        transform-origin: center center;
+        transform: rotate(-90deg);
+    }
+}
+@keyframes spinner {
+    0% {
+        stroke-dashoffset: 625;
+        transform: rotate(-90deg) scaleY(1);
+    }
+    50% {
+        stroke-dashoffset: 0;
+        transform: rotate(-90deg) scaleY(1);
+    }
+    50.001% {
+        transform: rotate(-90deg) scaleY(-1);
+    }
+    100% {
+        stroke-dashoffset: 625;
+        transform: rotate(-90deg) scaleY(-1);
+    }
+}
+
+@keyframes loader {
+    0% {
+        left:0px;
+    }
+    50% {
+        left:0px;
+    }
+    50.001% {
+        left:-12px;
+    }
+    100% {
+        left:-12px;
+    }
+}
+
+@keyframes beat{
+    0% {
+    transform: scale(1);
+}
+    35% {
+        transform: scale(1.2);
+    }
+}
+

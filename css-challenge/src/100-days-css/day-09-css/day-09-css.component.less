@@ -1,0 +1,65 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background: #4CB6DE;
+}
+
+.card-container{
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin: auto;
+    height: 320px;
+    width: 320px;
+    background: #4CB6DE;
+    .card-text{
+        color: white;
+        position: absolute;
+        z-index: 1;
+        font-size: 24px;
+        line-height: 34px;
+        margin: 40px 16px;
+        .obsession-word{
+            background: #286F8A;
+            padding: 0px 8px 5px 8px;
+            margin: -10px 0;
+            cursor: pointer;
+        }
+    }
+    .tooltip{
+        opacity: 0;
+        z-index: 3;
+        background: #286F8A;
+        height: 120px;
+        position: absolute;
+        top: 10px;
+        width: 288px;
+        left: 16px;
+        .tooltip-header{
+            position: absolute;
+            height: 32px;
+            background-color: white;
+            width: 288px;
+            color: #286F8A;
+            padding: 8px 12px;
+            line-height: 16px;
+        }
+        .tooltip-body{
+            margin-left: 12px;
+            color: white;
+            font-size: 14px;
+            line-height: 23px;
+            cursor: text;
+            position: relative;
+            top: 38px;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+            top: 114px;
+            left: 16px;
+            background: #286F8A;
+        }
+    }
+}

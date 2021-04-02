@@ -1,0 +1,125 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background: @app-background-color;
+}
+
+.card-container{
+    overflow: hidden;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin: auto;
+    height: 320px;
+    width: 320px;
+    background: white;
+    [class^="image-"]{
+       width: 160px;
+       height: 160px;
+       background-color: black;
+       border:solid 2px white;  
+        &:hover{
+            [class^="button-image"]{
+                opacity: 1;
+                transform: scale(1);
+            }
+            img{
+                opacity: 0.6;
+            }
+        }
+       img {
+            width: 157px;
+            height: 157px;
+            transition: all 0.6s ease-in-out;
+            cursor: pointer;
+       }
+       [class^="button-image"] {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            background: #EC6565;
+            border-radius: 50%;
+            box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease-in-out;
+            opacity: 0;
+            cursor: pointer;
+            transform: scale(1.7);
+        }
+        .btn-text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            color: white;
+            font-size: 28px;
+        }
+    }
+
+    .card-profile{
+        opacity: 0;
+        position: relative;
+        .background-image{
+            height: 160px;
+            width: 320px;
+            position: absolute;
+            top: 0px;
+            transition: all 0.6s ease-out;
+        }
+        .profile-picture{
+            height: 100px;
+            width: 100px;
+            border: solid 2px white;
+            position: absolute;
+            top: 115px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 3;
+            border-radius: 50%;
+        }
+        .background-color{
+            height: 160px;
+            width: 320px;
+            position: absolute;
+            top: 160px;
+            background-color: #EC6565;
+            transition: all 0.6s ease-out;
+            .profile-name{
+                color: white;
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                top: 70px;
+            }
+        }
+        .cancel-button{
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            background: #EC6565;
+            border-radius: 50%;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            .cancel-text{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                color: white;
+                i{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+            &:hover{
+                background: white;
+                .cancel-text{
+                    color: #EC6565;
+                }
+            }
+        }
+    }   
+}

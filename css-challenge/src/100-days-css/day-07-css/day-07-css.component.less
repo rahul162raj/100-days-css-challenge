@@ -5,30 +5,146 @@
 }
 
 .card-container{
-    margin: auto;
-    height: 300px;
-    width: 300px;
-    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-    background-color: @header-font-color;
-    font-family: "Open Sans", Helvetica, sans-serif;
-    .card-header{
-        background: #5F98CD;
-        height: 60px;
-        align-items: center;
+    .card-dashboard{
+        font-family: "Open Sans", Helvetica, sans-serif;
+        margin: auto;
+        height: 300px;
+        width: 300px;
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+        background-color: @header-font-color;
+        transition: all 0.5s ease-in-out;
+        .search-bar{
+            transform : translate3d(10px, 0, 0);
+            position: absolute;
+            top: 13px;
+            right: 55px;
+            width: 230px;
+            height: 34px;
+            border-radius: 17px;
+            border: none;
+            background: #fff;
+            padding: 0 17px;
+            font-size: 13px;
+            color: #666;
+            transition: all .5s ease-in-out;
+            opacity: 0;
+        }
+        .card-header{
+            position: relative;
+            z-index: 1;
+            background: #5F98CD;
+            height: 60px;
+            align-items: center;
+            .menu-icon{
+                position: absolute;
+                left: 16px;
+                color: white;
+                opacity: 0.6;
+                cursor: pointer;
+                .material-icons{
+                    font-size: 32px;
+                    line-height: 2;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            .search-icon{
+                position: absolute;
+                right: 16px;
+                color: white;
+                opacity: 0.6;
+                cursor: pointer;
+                .material-icons {
+                    font-size: 24px;
+                    line-height: 2;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            .header-title{
+                margin: 0 auto;
+                line-height: 60px;
+                color: #fff;
+                font-weight: 600;
+                font-size: 15px;
+            }
+        }
+        .card-content{
+            color: #666666;
+            .line {
+                position: absolute;
+                top: 0;
+                left: 28px;
+                bottom: 0;
+                width: 3px;
+                background: #EBEBEB;
+            }
+            .notification{
+                z-index: 2;
+                position: relative;
+                margin: 15px 24px 15px 24px;
+                .circle{
+                    margin-right: 8px;
+                    height: 11px;
+                    width: 14px;
+                    background: #fff;
+                    border: 2px solid #5F98CD;
+                    box-shadow: 0 0 0 3px #fff;
+                    border-radius: 6px;
+                }
+                .time{
+                    display: block;
+                    font-size: 11px;
+                    line-height: 11px;
+                    margin-bottom: 2px;
+                }
+                .text{
+                    p{
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                }
+                &:hover
+                {
+                        color: #5F98CD;
+                        cursor: pointer;
+                }
+            }
+        }
     }
-    .menu-icon{
-        position: absolute;
-        left: 16px;
-    }
-    .search-icon{
-        position: absolute;
-        right: 16px;
-    }
-    .header-title{
-        margin: 0 auto;
-        line-height: 60px;
-        color: #fff;
-        font-weight: 600;
-        font-size: 15px;
+
+    .menu{
+        left: -130px;
+        width: 170px;
+        height: 270px;
+        background: #43627D;
+        border-radius: 3px;
+        padding:10px 0px;
+        p{
+            color: #93B2CD;
+            margin: 0;
+            padding: 18px 17px;
+            font-size: 14px;
+            line-height: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .row{
+            padding-left: 16px;
+            .material-icons{
+                color: #93B2CD;
+                line-height: 2;
+            }
+            &:hover{
+                background: #385269;      
+                .material-icons , p{
+                    color: white;
+                }
+            }
+        }
     }
 }
+
+

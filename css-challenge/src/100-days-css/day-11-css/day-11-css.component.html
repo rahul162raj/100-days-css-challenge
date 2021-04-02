@@ -1,0 +1,29 @@
+<ng-container>
+    <div class="day-container">
+        <div class="card-container absolute-center">
+            <div class="card-header">
+                <div class="card-title">Drop file to upload</div>
+                <div class="bar" [ngStyle]="{'display': status === 'Upload Files' ? 'none' : 'block'}">
+                </div>
+            </div>
+            <div class="card-content">
+                <div [ngStyle]="{'opacity': status === 'Upload Files' ? '1' : '0' }">
+                    <input [ngStyle]="{'z-index': status === 'Upload Files' ? '2' : '-1'}" class="form-control"
+                        type="file" (change)="onChange($event)">
+                    <div *ngIf="fileName" class="file-name">{{fileName}}</div>
+                    <div class="drop-zone">
+                        <div *ngIf="!fileName" class="upload-icon-initial"><i class="material-icons">cloud_upload</i>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="status === 'Uploading...'" class="upload-icon-loading" style="left: 110px;top: 105px;">
+                    <i class="material-icons">autorenew</i>
+                </div>
+                <div *ngIf="status === 'Done'" class="upload-icon-done" style="left: 110px;top: 105px;">
+                    <i class="material-icons">done</i>
+                </div>
+                <div *ngIf="fileName" class="upload-button" (click)="onUploadBtnClick()">{{status}}</div>
+            </div>
+        </div>
+    </div>
+</ng-container>
