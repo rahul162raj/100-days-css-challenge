@@ -1,0 +1,61 @@
+@import "./../../assets/style/shared-variable.less";
+
+.day-container{
+    background: @app-background-color;
+}
+
+.card-container{
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin: auto;
+    height: 320px;
+    width: 320px;
+    background: #fff;
+    .slider-container{
+        height: 320px;
+        width: 320px;
+        display: block ruby;
+        overflow: hidden;
+        [class^='background-div']{
+            height: 320px;
+            width: 320px;
+            transition: all 1s ease;
+        }
+        .background-div-1{
+            background: #3498db;
+        }
+        .background-div-2{
+            background: #9b59b6;
+        }
+        .background-div-3{
+            background: #1abc9c;
+        }
+    }
+    .row-circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 320px;
+        width: 320px;
+        [class^='circle']{
+            width: 50px;
+            height: 50px;
+            border: 2px solid #fff;
+            margin-right: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    .active-circle{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        top: 140px;
+        left: 78px;
+        transition: all 1s ease;
+    }
+}

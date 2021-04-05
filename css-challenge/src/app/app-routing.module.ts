@@ -11,6 +11,8 @@ import { Day08CssComponent } from "./../100-days-Css/day-08-css/day-08-css.compo
 import { Day09CssComponent } from "./../100-days-Css/day-09-css/day-09-css.component";
 import { Day10CssComponent } from "./../100-days-Css/day-10-css/day-10-css.component";
 import { Day11CssComponent } from "./../100-days-Css/day-11-css/day-11-css.component";
+import { Day12CssComponent } from "./../100-days-Css/day-12-css/day-12-css.component";
+import { Day13CssComponent } from "./../100-days-Css/day-13-css/day-13-css.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'day-1', pathMatch: 'full' },
@@ -24,7 +26,9 @@ const routes: Routes = [
   { path: 'day-8', component: Day08CssComponent },
   { path: 'day-9', component: Day09CssComponent },
   { path: 'day-10', component: Day10CssComponent },
-  { path: 'day-11', component: Day11CssComponent }
+  { path: 'day-11', component: Day11CssComponent },
+  { path: 'day-12', component: Day12CssComponent },
+  { path: 'day-13', component: Day13CssComponent }
 ];
 
 @NgModule({
