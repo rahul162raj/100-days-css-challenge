@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 export class AppComponent implements OnInit {
 
   collection = [];
-  endIndex: number = 100;
+  endIndex: number = 13;
   currentIndex: number = 1;
 
   constructor(private router: Router, private location: Location) { }
